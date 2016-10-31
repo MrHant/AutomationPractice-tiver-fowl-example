@@ -32,20 +32,103 @@
     <CodeAnalysisRuleSet>AutomationPractice.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Handlebars, Version=1.0.0.0, Culture=neutral, PublicKeyToken=22225d0bf33cd661, processorArchitecture=MSIL">
+      <HintPath>packages\Handlebars.Net.1.7.1\lib\Handlebars.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.2.2.1\lib\net45\Serilog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.File, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.File.3.0.1\lib\net45\Serilog.Sinks.File.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Serilog.Sinks.Literate, Version=2.0.0.0, Culture=neutral, PublicKeyToken=24c2f752a8e58a10, processorArchitecture=MSIL">
+      <HintPath>packages\Serilog.Sinks.Literate.2.0.0\lib\net45\Serilog.Sinks.Literate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="Tiver.Fowl.Core, Version=1.0.6148.26449, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.Logging.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.Reporting, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.Reporting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.TestingBase, Version=1.0.6148.26450, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.TestingBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.ViewBase, Version=1.0.6148.26450, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.ViewBase.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.WebDriverExtended, Version=1.0.6148.26449, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.WebDriverExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Tiver.Fowl.WebDriverExtended.Contracts, Version=1.0.6123.23141, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Tiver.Fowl.0.1.5\lib\net45\Tiver.Fowl.WebDriverExtended.Contracts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebDriver, Version=2.53.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\Selenium.WebDriver.2.53.1\lib\net40\WebDriver.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseTestForMsTest.cs" />
+    <Compile Include="Elements\Button.cs" />
+    <Compile Include="Elements\Textbox.cs" />
+    <Compile Include="Elements\UserManagement\FormErrors.cs" />
+    <Compile Include="Elements\UserManagement\FormErrorsExtensions.cs" />
+    <Compile Include="Elements\UserManagement\ValidateableTextbox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tests\SignUpValidationTests.cs" />
+    <Compile Include="Views\UserManagement\SignInPage.cs" />
+    <Compile Include="Views\WebsiteHeaderMenu.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.config.tiver.fowl.sample" />
     <None Include="AutomationPractice.ruleset" />
+    <None Include="Default.runsettings" />
+    <None Include="Default.testsettings" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="templates\index.hbs" />
+    <None Include="templates\_foundation_javascript.hbs" />
+    <None Include="templates\_foundation_style.hbs" />
+    <None Include="templates\_jquery_javascript.hbs" />
+    <None Include="templates\_report_style.hbs" />
+    <None Include="templates\_test_result_row.hbs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\chromedriver.exe" />
+    <Content Include="lib\geckodriver.exe" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
