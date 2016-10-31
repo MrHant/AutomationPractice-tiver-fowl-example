@@ -9,13 +9,7 @@
     public class FormErrors : ILoggableElement
     {
         /// <param name="locator">Locator of div with classes "alert alert-danger"</param>
-        public FormErrors(string locator)
-        {
-            Locator = locator;
-            Name = "Unnamed";
-        }
-
-        /// <param name="locator">Locator of div with classes "alert alert-danger"</param>
+        /// <param name="name">Name of element for logging</param>
         public FormErrors(string locator, string name)
         {
             Locator = locator;
@@ -35,12 +29,12 @@
             return new Element($"{Locator}/p").Process(el => el.Text);
         }
 
-        private string Locator
+        public string Name
         {
             get;
         }
 
-        public string Name
+        private string Locator
         {
             get;
         }
