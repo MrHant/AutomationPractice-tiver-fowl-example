@@ -116,6 +116,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="README.md" />
     <None Include="templates\index.hbs" />
     <None Include="templates\_foundation_javascript.hbs" />
     <None Include="templates\_foundation_style.hbs" />
